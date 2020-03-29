@@ -1,6 +1,5 @@
 {
   "name": "emersonart/suapoauth2",
-  "type": "library",
   "description": "Biblioteca para conexão com a API do SUAP para o IFRN.",
   "keywords": ["OAuth2","SUAP","api","IFRN","php"],
   "homepage": "https://github.com/emersonart/Suap-OAuth2-PHP",

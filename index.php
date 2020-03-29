@@ -2,7 +2,7 @@
 
 
 require 'class/Suap_OAuth2.php';
-use Suap\Suap;
+use SuapOAuth2\Suap;
 
 $suap =  new Suap();
 $params = [

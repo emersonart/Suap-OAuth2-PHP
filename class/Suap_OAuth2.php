@@ -1,5 +1,5 @@
 <?php
-namespace Suap;
+namespace SuapOAuth2;
 
 require dirname(__DIR__).DIRECTORY_SEPARATOR."includes".DIRECTORY_SEPARATOR."constants.php";
 
