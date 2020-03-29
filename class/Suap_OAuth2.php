@@ -132,7 +132,7 @@ class Suap{
 	 *	@param {} redirect_url - url de retorno da api, pode ser alterado na inicilização da classe. É PRECISO QUE A URL
 	 *	FORNECIDA ESTEJA NA LISTA PERMITIDA DA SUA APLICAÇÃO
 	*/
-	protected $redirect_uri = 'suap_auth/';
+	protected $redirect_uri = SUAP_REDIRECT_URI;
 
 	/**
 	 *
@@ -202,7 +202,7 @@ class Suap{
 
 		$this->client_secret = $config['client_secret'];
 
-		$this->redirect_uri = (isset($config['redirect_uri']) ? $config['redirect_uri'] : base_url($this->config['redirect_uri']));
+		$this->redirect_uri = (isset($config['redirect_uri']) ? $config['redirect_uri'] : SUAP_REDIRECT_URI);
 
 		$this->set_login_url();
 		
@@ -348,8 +348,6 @@ class Suap{
 		return $this->login_url;
 
   }
-
-  
 
 	public function is_authenticated(){
 		return $this->is_valid();

@@ -1,6 +1,5 @@
 <?php 
-defined('SUAP_CLIENT_ID')		||  define('SUAP_CLIENT_ID','YOUR_CLIENT_ID');
-defined('SUAP_CLIENT_SECRET')		|| define('SUAP_CLIENT_SECRET','YOUR_CLIENT_SECRET');
+
 
 require 'class/Suap_OAuth2.php';
 use Suap\Suap;
@@ -9,7 +8,7 @@ $suap =  new Suap();
 $params = [
 	'client_id' => SUAP_CLIENT_ID,
 	'client_secret' => SUAP_CLIENT_SECRET,
-	'redirect_uri' => 'http://localhost/suap_teste/noci/'
+	'redirect_uri' => SUAP_REDIRECT_URI
 ];
 $suap->init($params);
 
