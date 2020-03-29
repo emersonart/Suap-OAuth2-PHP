@@ -1,7 +1,6 @@
 <?php
 namespace SuapOAuth2;
-
-require dirname(__FILE__).DIRECTORY_SEPARATOR."includes".DIRECTORY_SEPARATOR."constants.php";
+use Dotenv\Dotenv;
 
 class Suap{
 
@@ -183,6 +182,7 @@ class Suap{
 	*/
 	protected $GET = 'GET';
 
+  private $ENV;
 
 
 
@@ -194,15 +194,15 @@ class Suap{
 	}
 
   public function init($config = NULL){
+    
+    $this->ENV = Dotenv::createImmutable(dirname(__DIR__),'.suapconfig');
+    $this->ENV->load();
 
-		if(!isset($config['client_id']) || !isset($config['client_secret'])){
-			return FALSE;
-		}
-		$this->client_id = $config['client_id'];
+		$this->client_id =(isset($config['client_id']) ? $config['client_id'] : $_ENV['SUAP_CLIENT_ID']);
 
-		$this->client_secret = $config['client_secret'];
+		$this->client_secret = (isset($config['client_secret']) ? $config['client_secret'] : $_ENV['SUAP_CLIENT_SECRET']);
 
-		$this->redirect_uri = (isset($config['redirect_uri']) ? $config['redirect_uri'] : SUAP_REDIRECT_URI);
+		$this->redirect_uri = (isset($config['redirect_uri']) ? $config['redirect_uri'] : $_ENV['SUAP_REDIRECT_URI']);
 
 		$this->set_login_url();
 		

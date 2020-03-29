@@ -2,15 +2,15 @@
 
 
 require 'src/SuapOAuth2.php';
+require 'vendor/autoload.php';
 use SuapOAuth2\Suap;
-
 $suap =  new Suap();
 $params = [
 	'client_id' => SUAP_CLIENT_ID,
 	'client_secret' => SUAP_CLIENT_SECRET,
 	'redirect_uri' => SUAP_REDIRECT_URI
 ];
-$suap->init($params);
+$suap->init();
 
 echo "<pre>";
 var_dump($suap->get_dados());

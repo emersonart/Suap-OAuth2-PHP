@@ -1,2 +1,6 @@
 */suap_logs/
 !*/suap_logs/index.html
+*/vendor/
+composer.lock
+.suapconfig
+vendor/
