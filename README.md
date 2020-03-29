@@ -39,6 +39,7 @@ Root                          # → Root Project Directory
 
 Crie sua aplicação em https://suap.ifrn.edu.br/api/ com as seguintes informações:
 
+
 - **Client Type:** Confidential
 - **Authorization Grant Type:** authorization-code
 - **Redicert URIs**: **SEU_HOST**/suap_auth/ (Alterar para o seu servidor)
