@@ -1,7 +1,7 @@
 <?php 
 
 
-require 'class/Suap_OAuth2.php';
+require 'src/SuapOAuth2.php';
 use SuapOAuth2\Suap;
 
 $suap =  new Suap();
