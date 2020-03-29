@@ -18,7 +18,7 @@
   },
   "autoload": {
     "psr-4": {
-        "SuapOAuth2\\": "class/"
+        "SuapOAuth2\\": "src/"
     }
   }
 }
