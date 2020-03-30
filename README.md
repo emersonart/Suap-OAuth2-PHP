@@ -1,6 +1,8 @@
 # Suap OAuth2 PHP
 Biblioteca para conexão com a API do SUAP para o IFRN.
 
+**Ainda se encontra em desenvolvimento!**
+
 ## Sobre
 
 O **Suap OAuth2 php** implementa a integração com o SUAP, tendo 2 principais funcionalidades:
@@ -11,14 +13,14 @@ O **Suap OAuth2 php** implementa a integração com o SUAP, tendo 2 principais f
 ## Requisitos
 
 - cURL;
-
+- [PHPDotEnv 4.x](https://github.com/vlucas/phpdotenv);
 ---
 
 ## Instalação
 
- Antes da instalação verifique se atende aos resquisitos.
+ Antes da instalação verifique se atende aos resquisitos. Para a instalação existem duas formas: manual ou via composer.
 
-> Mova os arquivos deste pacote para seu servidor
+> **1. Manual**. Mova os arquivos deste pacote para seu servidor
 
 ```shell
 Root                          # → Root Project Directory
@@ -31,8 +33,30 @@ Root                          # → Root Project Directory
 └── index.php                 # → Arquivo para teste de funções  
 ```
 
----
+> **2. Via Composer**. Mova os arquivos deste pacote para seu servidor
 
+Adicione ao composer.json do seu projeto:
+
+```shell
+{
+  "require" {
+    "emersonart/suapoauth2" : "dev-develop"
+  }
+}
+
+```
+Então execute 
+
+```shell
+composer update
+```
+---
+Ou
+
+Execute o comando:
+```shell
+composer require emersonart/suapoauth2:dev-develop
+```
 ## Instruções
 
 ### Crie sua Aplicação no SUAP
